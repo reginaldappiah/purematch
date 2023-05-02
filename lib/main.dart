@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:purematch/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,25 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
       ),
-      home: const AdminConsole(title: 'Add an Admin'),
-    );
-  }
-}
-
-class AdminConsole extends StatelessWidget {
-  const AdminConsole({super.key, required this.title});
-
-  final String title;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center(child: ListView.builder(itemBuilder: (context, index) {
-        return ListTile(leading: Text("Name $index"));
-      })),
+      home: const HomePage(),
     );
   }
 }
