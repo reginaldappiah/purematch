@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:purematch/pages/admin_page.dart';
 import 'package:purematch/pages/home_page.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         brightness: Brightness.dark,
       ),
-      home: const HomePage(),
+      home: const AdminPage(),
     );
   }
 }
