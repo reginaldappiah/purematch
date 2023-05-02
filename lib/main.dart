@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const AdminConsole(title: 'Admin Console'),
+      home: const AdminConsole(title: 'Add an Admin'),
     );
   }
 }
@@ -30,25 +30,9 @@ class AdminConsole extends StatelessWidget {
       appBar: AppBar(
         title: Text(title),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      body: Center(child: ListView.builder(itemBuilder: (context, index) {
+        return ListTile(leading: Text("Name $index"));
+      })),
     );
   }
 }
