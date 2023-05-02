@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Pure Match',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        brightness: Brightness.dark,
       ),
       home: const AdminConsole(title: 'Add an Admin'),
     );
