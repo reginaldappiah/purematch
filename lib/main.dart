@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:purematch/cubits/search/search_cubit.dart';
+import 'package:purematch/cubits/search/admin_search_bar_cubit.dart';
 import 'package:purematch/pages/admin_page.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       ),
       home: MultiBlocProvider(
         providers: [
-          BlocProvider(create: (context) => SearchCubit()),
+          BlocProvider(create: (context) => AdminSearchBarCubit()),
         ],
         child: const AdminPage(),
       ),
