@@ -1,18 +1,19 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 
 class AdminSearchBarState extends Equatable {
-  final String searchText;
+  final TextEditingController controller;
 
-  const AdminSearchBarState(this.searchText);
+  const AdminSearchBarState(this.controller);
 
   @override
-  List<Object?> get props => [searchText];
+  List<Object?> get props => [controller];
 }
 
 class AdminSearchBarEmpty extends AdminSearchBarState {
-  const AdminSearchBarEmpty() : super('');
+  AdminSearchBarEmpty() : super(TextEditingController(text: ''));
 }
 
 class AdminSearchBarUpdate extends AdminSearchBarState {
-  const AdminSearchBarUpdate(super.name);
+  const AdminSearchBarUpdate(super.controller);
 }
